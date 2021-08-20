@@ -26,7 +26,7 @@ public class CustomerRegiServiceDAOImpl implements CustomerRegiServiceDAO {
 			c=preparedStatement.executeUpdate();
 		}catch(ClassNotFoundException | SQLException e) {
 			System.out.println(e);
-			throw new BusinessException("Internal Errored Occured");
+			throw new BusinessException("Email ID Already Registered.....");
 		}
      return c;
 	}

@@ -1,10 +1,20 @@
 package shop.app.model;
 
 public class Customer {
+	private int cid;
 	 private String cfirstname;
 	 private String clastname;
 	 private String cemail;
 	 private String cpassword;
+	 
+	
+	 
+	public int getCid() {
+		return cid;
+	}
+	public void setCid(int cid) {
+		this.cid = cid;
+	}
 	public String getCfirstname() {
 		return cfirstname;
 	}
@@ -31,15 +41,17 @@ public class Customer {
 	}
 	@Override
 	public String toString() {
-		return "Costomer_regis [cfirstname=" + cfirstname + ", clastname=" + clastname + ", cemail=" + cemail + ", password=" + cpassword + "]";
+		return "Costomer_regis [cid="+cid+"cfirstname=" + cfirstname + ", clastname=" + clastname + ", cemail=" + cemail + ", password=" + cpassword + "]\n";
+		
 	}
 	
 	
 	public Customer() {
 		super();
 	}
-	public Customer(String cfirstname, String clastname, String cemail, String password) {
+	public Customer(int cid,String cfirstname, String clastname, String cemail, String password) {
 		super();
+		this.cid=cid;
 		this.cfirstname = cfirstname;
 		this.clastname = clastname;
 		this.cemail = cemail;
